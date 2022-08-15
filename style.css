@@ -1,0 +1,195 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body{
+  background-color: #101010;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: min(18px, max(5vw, 13px));
+}
+.titulo {
+	height: 100px;
+	width: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	
+}
+#pokemonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+
+    
+ }
+
+
+.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.tarjeta {
+	width: 200px;
+	margin: 1rem;
+
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+.tarjeta .frontal,
+.tarjeta .tracero {
+	height: auto;
+	min-height: 280px;
+
+	background-size: cover;
+	background-position: center;
+
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.tarjeta .frontal {
+
+  background-color: #66D7D1;
+  /* Posicion por defecto */
+  transform: rotateY(0deg);
+}
+.tarjeta .tracero {
+	width: 100%;
+	
+	background-color: #957DAD;
+	
+	top: 0;
+	left: 0;
+	position: absolute;
+  /* Posicion por defecto */
+	transform: rotateY(180deg);
+}
+/* Velocidad de trancicion */
+.tarjeta:hover .frontal,
+.tarjeta:hover .tracero {transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);}
+
+/* Girar imagen */
+.tarjeta:hover .frontal {transform: rotateY(-180deg);}
+.tarjeta:hover .tracero {transform: rotateY(0deg);}
+
+
+.tarjeta .contenido {
+	width: 100%;
+	position: absolute;
+	
+	padding: 2rem;
+	box-sizing: border-box;
+	
+	top: 50%;
+	left: 0;
+	perspective: inherit;
+  /* Posicion de texto central */
+	transform: translateY(-50%) translateZ(60px) scale(0.94);
+}
+.frontal .contenido p {
+	font-size: 4rem;
+	position: relative;
+	margin-bottom: .5rem;
+	font-weight: 400;
+	color: #101010;
+}
+.frontal .contenido hr {
+	width: 4rem;
+	height: 2px;
+	
+	background: #C6D4DF;
+	
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+.frontal .contenido span {color: rgba(255, 255, 255, 0.7);}
+
+/*FUENTES*/
+
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #101010;
+}
+
+p {
+    color: #101010;
+    font-size:25px;
+	font-weight: 200;
+}
+
+img{
+    margin: auto;
+    margin-top:10px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+/*TIPOS   1*/
+
+.tarjeta .fire{
+    background-color: rgba(255, 0, 0, 0.534)
+}
+.tarjeta .grass{
+    background-color: rgba(30, 255, 0, 0.377), 
+}
+.tarjeta .poison{
+    background-color: rgba(255, 0, 200, 0.575)
+}
+.tarjeta .water{
+    background-color: rgba(47, 0, 255, 0.466)
+}
+.tarjeta .flying{
+    background-color: rgba(244, 246, 247, 0.425)
+}
+.tarjeta .bug{
+    background-color: rgba(19, 117, 10, 0.466)
+}
+.tarjeta .normal{
+    background-color: rgba(207, 182, 205, 0.397)
+}
+
+
+.tarjeta .electric{
+    background-color: rgba(238, 255, 0, 0.432)
+}
+.tarjeta .gruond{
+    background-color: rgba(219, 171, 12, 0.61)
+}
+.tarjeta .fairy{
+    background-color: rgba(0, 255, 179, 0.363)
+}
+.tarjeta .fighting{
+    background-color: rgba(255, 153, 0, 0.473)
+}
+.tarjeta .psychic{
+    background-color: red
+}
+.tarjeta .rock{
+    background-color: rgba(85, 79, 79, 0.801)
+}
+.tarjeta .gosht{
+    background-color: rgba(204, 0, 255, 0.267)
+}
+.tarjeta .ice{
+    background-color: rgba(0, 255, 234, 0.863)
+}
+.tarjeta .dagon{
+    background-color: rgba(251, 255, 0, 0.514)
+}
+
+.tarjeta .poison{
+    background-color: rgba(30, 255, 0, 0.377), 
+}
+
